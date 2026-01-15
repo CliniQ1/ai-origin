@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ai-detector"
+version = "0.1.0"
+description = "A FastAPI backend for AI content analysis service"
+authors = ["Your Name <youremail@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.75.0"
+uvicorn = "^0.17.0"
+sqlalchemy = "^1.4.27"
+asyncpg = "^0.24.0"
+redis = "^4.0.2"
+pydantic = "^1.8.2"
+alembic = "^1.7.5"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+httpx = "^0.19.0"
+mypy = "^0.910"
+black = "^21.9b0"
+isort = "^5.9.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

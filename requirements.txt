@@ -1,0 +1,13 @@
+FastAPI
+uvicorn
+asyncpg
+redis
+pydantic
+sqlalchemy
+alembic
+python-multipart
+aiofiles
+loguru
+pytest
+pytest-asyncio
+httpx
