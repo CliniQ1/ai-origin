@@ -3,7 +3,6 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/")
+@app.get("/health")
 def healthcheck():
     return {"status": "ok"}
-add fastapi entrypoint
