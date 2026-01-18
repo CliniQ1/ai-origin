@@ -1,10 +1,6 @@
 from fastapi import APIRouter
+from app.api.v1.endpoints import health
 
-router = APIRouter(
-    prefix="/api/v1",
-    tags=["v1"],
-)
+router = APIRouter(prefix="/api/v1")
 
-@router.get("/health")
-async def v1_health():
-    return {"status": "ok"}
+router.include_router(health.router)
