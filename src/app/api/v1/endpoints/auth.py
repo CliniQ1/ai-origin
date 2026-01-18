@@ -1,14 +1,13 @@
 from fastapi import APIRouter
-from app.schemas.auth import LoginRequest, RegisterRequest, AuthResponse
+from app.schemas.auth import AuthLogin
 
-router = APIRouter(prefix="/auth", tags=["auth"])
+router = APIRouter(
+    prefix="/auth",
+    tags=["auth"]
+)
 
-@router.post("/login", response_model=AuthResponse)
-async def login(request: LoginRequest):
-    # пока просто возвращаем тестовые данные
-    return AuthResponse(access_token="testtoken123")
+@router.post("/login")
+async def login(data: AuthLogin):
+    # тут логика авторизации
+    return {"access_token": "fake_token_for_now"}
 
-@router.post("/register", response_model=AuthResponse)
-async def register(request: RegisterRequest):
-    # пока просто возвращаем тестовые данные
-    return AuthResponse(access_token="newusertoken123")
