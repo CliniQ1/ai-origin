@@ -1,6 +1,5 @@
-# src/app/api/v1/router.py
 from fastapi import APIRouter
-from app.api.v1.endpoints import auth, root, health  # root уже создан
+from app.api.v1.endpoints import auth, health, root
 
 api_router = APIRouter()
 api_router.include_router(root.router)
