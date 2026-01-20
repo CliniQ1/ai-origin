@@ -11,3 +11,5 @@ loguru
 pytest
 pytest-asyncio
 httpx
+email-validator
+
