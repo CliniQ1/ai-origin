@@ -1,9 +1,5 @@
-from fastapi import APIRouter
+from app.api.v1.endpoints import auth, health, root
 
-from .health import router as health_router
-from .auth import router as auth_router
-
-router = APIRouter()
-
-router.include_router(health_router)
-router.include_router(auth_router)
+api_router.include_router(auth.router)
+api_router.include_router(health.router)
+api_router.include_router(root.router)  # теперь работает
