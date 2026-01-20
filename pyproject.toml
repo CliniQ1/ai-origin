@@ -25,9 +25,3 @@ isort = "^5.9.3"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-# Linux / Mac
-source .venv/bin/activate
-
-# Windows
-.venv\Scripts\activate
