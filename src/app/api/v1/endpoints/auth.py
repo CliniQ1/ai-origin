@@ -12,4 +12,3 @@ async def login(data: LoginRequest):
         "access_token": "fake_token_for_now",
         "token_type": "bearer"
     }
-
